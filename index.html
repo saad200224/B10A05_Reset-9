@@ -80,7 +80,9 @@
               class="flex gap-5 items-center bg-gray-100 p-4 rounded-lg max-w-fit"
             >
               <img src="./images/coin.png" alt="" />
-              <h1 class="text-gray-500 text-xl font-medium">5500 BDT</h1>
+              <h1 class="text-gray-500 text-xl font-medium">
+                <span id="total-donation-noakhali">0</span> BDT
+              </h1>
             </div>
             <h1 class="text-black font-bold text-xl py-4">
               Donate for Flood at Noakhali, Bangladesh
@@ -96,13 +98,14 @@
             <div class="flex flex-col">
               <input
                 class="border rounded-lg p-4 mb-4"
-                type="number"
+                type=""
                 name="donate-amount"
-                id=""
+                id="donate-noakhali-amount"
                 placeholder="Write Donation Amount"
               />
               <button
                 class="bg-lime-300 text-black text-xl font-semibold rounded-lg px-8 py-4"
+                id="btn-donate-noakhali"
               >
                 Donate Now
               </button>
@@ -117,7 +120,9 @@
               class="flex gap-5 items-center bg-gray-100 p-4 rounded-lg max-w-fit"
             >
               <img src="./images/coin.png" alt="" />
-              <h1 class="text-gray-500 text-xl font-medium">5500 BDT</h1>
+              <h1 class="text-gray-500 text-xl font-medium">
+                <span id="">5500</span> BDT
+              </h1>
             </div>
             <h1 class="text-black font-bold text-xl py-4">
               Donate for Flood Relief in Feni,Bangladesh
@@ -137,11 +142,12 @@
                 class="border rounded-lg p-4 mb-4"
                 type="number"
                 name="donate-amount"
-                id=""
+                id="donate-feni-amount"
                 placeholder="Write Donation Amount"
               />
               <button
                 class="bg-lime-300 text-black text-xl font-semibold rounded-lg px-8 py-4"
+                id=""
               >
                 Donate Now
               </button>
@@ -182,6 +188,7 @@
               />
               <button
                 class="bg-lime-300 text-black text-xl font-semibold rounded-lg px-8 py-4"
+                id=""
               >
                 Donate Now
               </button>
@@ -192,5 +199,9 @@
     </main>
 
     <footer class="bg-[#F9F7F3] min-h-20 mt-20"></footer>
+
+    <!-- js file -->
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
