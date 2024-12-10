@@ -37,5 +37,42 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
 
 
 
+document.getElementById('btn-history').addEventListener('click', function(){
+
+    const historyButton = document.getElementById('btn-history');
+    historyButton.classList.add('bg-lime-300', 'text-black');
+    historyButton.classList.remove('text-gray-500', 'outline', 'outline-2');
+
+
+    const donationButton = document.getElementById('btn-donation');
+    donationButton.classList.remove('bg-lime-300');
+    donationButton.classList.add('outline', 'outline-2', 'text-gray-500');
+
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.classList.add('hidden');
+
+    const historyList = document.getElementById('history-section');
+    historyList.classList.remove('hidden');
+});
+
+
+document.getElementById('btn-donation').addEventListener('click', function(){
+
+    const historyButton = document.getElementById('btn-history');
+    historyButton.classList.remove('bg-lime-300', 'text-black');
+    historyButton.classList.add('text-gray-500', 'outline', 'outline-2');
+
+
+    const donationButton = document.getElementById('btn-donation');
+    donationButton.classList.add('bg-lime-300');
+    donationButton.classList.remove('outline', 'outline-2', 'text-gray-500');
+
+    const cardContainer = document.getElementById('card-container');
+    cardContainer.classList.remove('hidden');
+
+    const historyList = document.getElementById('history-section');
+    historyList.classList.add('hidden');
+
+});
 
 
