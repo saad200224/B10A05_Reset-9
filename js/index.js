@@ -25,7 +25,7 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
         const historySection = document.createElement('div');
         historySection.className = 'border p-8 rounded-2xl mb-6';
         historySection.innerHTML=`
-        <h2 class="text-black font-bold text-xl py-4">${newDonateAmountForNoakhali} Taka is Donated for flood-2024 at Feni, Bangladesh  </h2>
+        <h2 class="text-black font-bold text-xl py-4">${newDonateAmountForNoakhali} Taka is ${document.getElementById('title-id').innerText}  </h2>
         <p class='text-xs text-gray-500'>Date: ${new Date()}</p>
         `;
         const historyContainer = document.getElementById('history-section');
@@ -33,9 +33,12 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
 
         my_modal_1.showModal();
 
-        // alert('Donation Successfull.');
+        document.getElementById('no-donation-text').classList.add('hidden');
     }
 });
+
+
+// history button functionality
 
 document.getElementById('btn-history').addEventListener('click', function(){
 
@@ -55,6 +58,7 @@ document.getElementById('btn-history').addEventListener('click', function(){
     historyList.classList.remove('hidden');
 });
 
+// donation button functionality
 
 document.getElementById('btn-donation').addEventListener('click', function(){
 
