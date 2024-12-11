@@ -25,7 +25,86 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
         const historySection = document.createElement('div');
         historySection.className = 'border p-8 rounded-2xl mb-6';
         historySection.innerHTML=`
-        <h2 class="text-black font-bold text-xl py-4">${newDonateAmountForNoakhali} Taka is ${document.getElementById('title-id').innerText}  </h2>
+        <h2 class="text-black font-bold text-xl py-4">${newDonateAmountForNoakhali} Taka is ${document.getElementById('title-id-noakhali').innerText}  </h2>
+        <p class='text-xs text-gray-500'>Date: ${new Date()}</p>
+        `;
+        const historyContainer = document.getElementById('history-section');
+        historyContainer.insertBefore(historySection, historyContainer.firstChild);
+
+        my_modal_1.showModal();
+
+        document.getElementById('no-donation-text').classList.add('hidden');
+    }
+});
+
+
+// calculation for donation for flood for feni
+
+document.getElementById('btn-donate-feni').addEventListener('click', function(){
+    const newDonateAmountForFeni = getInputFieldValue('donate-feni-amount');
+    
+    const previousDonatedAMountForFeni= getTextFieldValue('total-donation-feni');
+
+    const balanceAMount = getTextFieldValue('current-balance-amount');
+
+    if(newDonateAmountForFeni <=0 || isNaN(newDonateAmountForFeni)){
+        alert('Invalid Donate Amount.');
+        return;
+    }
+    else if (newDonateAmountForFeni>balanceAMount){
+        alert('You do not have enough amount to donate.');
+        return;
+    }
+    else{
+        const totalDonationAmountForFeni = newDonateAmountForFeni + previousDonatedAMountForFeni;
+        document.getElementById('total-donation-feni').innerText = totalDonationAmountForFeni;
+
+        const updatedBalance = balanceAMount - newDonateAmountForFeni;
+        document.getElementById('current-balance-amount').innerText = updatedBalance;
+
+        const historySection = document.createElement('div');
+        historySection.className = 'border p-8 rounded-2xl mb-6';
+        historySection.innerHTML=`
+        <h2 class="text-black font-bold text-xl py-4">${newDonateAmountForFeni} Taka is ${document.getElementById('title-id-feni').innerText}  </h2>
+        <p class='text-xs text-gray-500'>Date: ${new Date()}</p>
+        `;
+        const historyContainer = document.getElementById('history-section');
+        historyContainer.insertBefore(historySection, historyContainer.firstChild);
+
+        my_modal_1.showModal();
+
+        document.getElementById('no-donation-text').classList.add('hidden');
+    }
+});
+
+// calculation for donation for flood for quota
+
+document.getElementById('btn-donate-quota').addEventListener('click', function(){
+    const newDonateAmountForQuota = getInputFieldValue('donate-quota-amount');
+    
+    const previousDonatedAMountForQuota= getTextFieldValue('total-donation-quota');
+
+    const balanceAMount = getTextFieldValue('current-balance-amount');
+
+    if(newDonateAmountForQuota <=0 || isNaN(newDonateAmountForQuota)){
+        alert('Invalid Donate Amount.');
+        return;
+    }
+    else if (newDonateAmountForQuota>balanceAMount){
+        alert('You do not have enough amount to donate.');
+        return;
+    }
+    else{
+        const totalDonationAmountForQuota = newDonateAmountForQuota + previousDonatedAMountForQuota;
+        document.getElementById('total-donation-quota').innerText = totalDonationAmountForQuota;
+
+        const updatedBalance = balanceAMount - newDonateAmountForQuota;
+        document.getElementById('current-balance-amount').innerText = updatedBalance;
+
+        const historySection = document.createElement('div');
+        historySection.className = 'border p-8 rounded-2xl mb-6';
+        historySection.innerHTML=`
+        <h2 class="text-black font-bold text-xl py-4">${newDonateAmountForQuota} Taka is ${document.getElementById('title-id-quota').innerText}  </h2>
         <p class='text-xs text-gray-500'>Date: ${new Date()}</p>
         `;
         const historyContainer = document.getElementById('history-section');
