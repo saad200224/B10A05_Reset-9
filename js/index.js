@@ -30,12 +30,12 @@ document.getElementById('btn-donate-noakhali').addEventListener('click', functio
         `;
         const historyContainer = document.getElementById('history-section');
         historyContainer.insertBefore(historySection, historyContainer.firstChild);
-        
-        alert('Donation Successfull.');
+
+        my_modal_1.showModal();
+
+        // alert('Donation Successfull.');
     }
 });
-
-
 
 document.getElementById('btn-history').addEventListener('click', function(){
 

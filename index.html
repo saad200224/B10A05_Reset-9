@@ -43,7 +43,7 @@
         <button
           class="bg-lime-300 text-black text-xl font-semibold rounded-lg px-8 py-3"
         >
-          <a href="./blog.html"">Blog</a>
+          <a href="./blog.html">Blog</a>
         </button>
         <div class="flex gap-5 items-center">
           <img src="./images/logo.png" alt="" />
@@ -114,6 +114,31 @@
               >
                 Donate Now
               </button>
+              <!-- by using modal -->
+              <!-- modal start -->
+              <!-- Open the modal using ID.showModal() method -->
+              <button class="" onclick="my_modal_1.showModal()"></button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box text-center">
+                  <h3 class="text-4xl font-bold text-center">Congrates!</h3>
+                  <div class="flex justify-center mt-5 mb-5">
+                    <img src="./images/coin.png" alt="" />
+                  </div>
+                  <p class="text-center text-gray-500 text-xl font-bold">
+                    You Have Donated for Humankind
+                  </p>
+                  <p class="py-4 text-center font-bold text-3xl">
+                    Successfully
+                  </p>
+                  <div class="modal-action flex justify-center">
+                    <form method="dialog">
+                      <!-- if there is a button in form, it will close the modal -->
+                      <button class="btn">Close Confirmation</button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+              <!-- modal end -->
             </div>
           </div>
         </div>
